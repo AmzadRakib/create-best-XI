@@ -268,18 +268,21 @@
                                 <label for="manager" class="fw-bold col-sm-5 col-form-label text-white">Manager:</label>
                                 <div class="col-sm-7 mb-3 p-0">
                                     <input type="text"
-                                        class="bg-secondary border-2 border border-light text-white py-2 form-control">
+                                        class="bg-secondary border-2 border border-light text-white py-2 form-control"
+                                        id="manager-cost">
                                 </div>
                                 <label for="coach" class="fw-bold col-sm-5 col-form-label text-white">Coach:</label>
                                 <div class="col-sm-7 mb-3 p-0">
                                     <input type="text"
-                                        class="bg-secondary border-2 border border-light text-white py-2 form-control">
+                                        class="bg-secondary border-2 border border-light text-white py-2 form-control"
+                                        id="coach-cost">
                                 </div>
-                                <button id="btn-save" class="btn btn-primary w-full fw-bold py-3">Calculate</button>
+                                <button id="btn-total-calculate"
+                                    class="btn btn-primary w-full fw-bold py-3">Calculate</button>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <h4 class="text-white d-inline">Total:</h4>
-                                <h4 class="text-white d-inline">$<span>00</span></h4>
+                                <h4 class="text-white d-inline">$<span id="total-expense">00</span></h4>
                             </div>
                         </div>
                     </div>

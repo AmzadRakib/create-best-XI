@@ -57,3 +57,26 @@ document.getElementById('btn-calculate-expense').addEventListener('click', funct
     totalPlayerExpense.innerText = totalPlayerAmount;
 })
 
+document.getElementById('btn-total-calculate').addEventListener('click', function () {
+    const totalPlayerExpenseField = document.getElementById('player-expense');
+    const totalPlayerExpenseString = totalPlayerExpenseField.innerText;
+    const totalPlayerExpense = parseInt(totalPlayerExpenseString);
+    const managerExpense = getInputElementId('manager-cost');
+    const coachExpense = getInputElementId('coach-cost');
+    if (
+        totalPlayerExpense <= 0 ||
+        isNaN(managerExpense) ||
+        managerExpense < 0 ||
+        coachExpense === '' ||
+        isNaN(coachExpense) ||
+        coachExpense < 0
+    ) {
+        alert('Please select player and input all value');
+        return;
+    }
+    const totalExpense = totalPlayerExpense + managerExpense + coachExpense;
+    document.getElementById('total-expense').innerText = totalExpense;
+
+
+})
+
