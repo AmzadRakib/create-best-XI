@@ -253,14 +253,16 @@
                                 Player:</label>
                             <div class="col-sm-7 mb-3 p-0">
                                 <input type="text"
-                                    class="bg-secondary border-2 border border-light text-white py-2 form-control">
+                                    class="bg-secondary border-2 border border-light text-white py-2 form-control"
+                                    id="Player-cost">
                             </div>
-                            <button id="btn-save" class="btn btn-primary w-full fw-bold py-3">Calculate</button>
+                            <button id="btn-calculate-expense"
+                                class="btn btn-primary w-full fw-bold py-3">Calculate</button>
                         </div>
                         <div class=" p-3 card-bg">
                             <div class="d-flex justify-content-between">
                                 <h4 class="text-white d-inline">Player Expense:</h4>
-                                <h4 class="text-white d-inline">$<span>00</span></h4>
+                                <h4 class="text-white d-inline">$<span id="player-expense">00</span></h4>
                             </div>
                             <div class="row mb-3 mt-3">
                                 <label for="manager" class="fw-bold col-sm-5 col-form-label text-white">Manager:</label>

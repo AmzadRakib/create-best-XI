@@ -32,3 +32,28 @@ function selectPlayer(element) {
 
 
 }
+
+
+
+// calculate section 
+
+// common function 
+function getInputElementId(elementId) {
+    const usingId = document.getElementById(elementId);
+    const getIdString = usingId.value;
+    const getInputId = parseInt(getIdString);
+    return getInputId;
+}
+document.getElementById('btn-calculate-expense').addEventListener('click', function () {
+    const selectedPlayer = playerArray.length;
+    const playerAmount = getInputElementId('Player-cost');
+    document.getElementById('Player-cost').value = '';
+    if (isNaN(playerAmount)) {
+        alert('Please input player expense and select player')
+        return;
+    }
+    const totalPlayerAmount = selectedPlayer * playerAmount;
+    const totalPlayerExpense = document.getElementById('player-expense');
+    totalPlayerExpense.innerText = totalPlayerAmount;
+})
+
